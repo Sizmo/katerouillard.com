@@ -1,0 +1,132 @@
+:root {
+    --bgc: rgb(22,135,75);
+    --bgc_nav: rgba(22,135,75,0.5);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bgc);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: var(--bgc_nav);
+    position: sticky;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+    list-style: none;
+}
+
+nav li {
+    font-size: 1.5rem;
+    display: inline;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    margin: 0 2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: black;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #CCF6E0;
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+    padding: 5px;
+}
+
+h4 {
+    display: inline-block;
+    padding: 5px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    background-color: #16874B;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    color: #15DA8B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #32B86C;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 30%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.slogan {
+    background-color: #0C4A29;
+    color: #C1F5D9;
+}
+
+.main {
+    text-align: center;
+}
+
+.alt-bg {
+    background-color: #0C4A29;
+    color: #C1F5D9;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    width: 50%;
+}
+
+.footer {
+    text-align: center;
+    color: #163C3C;
+}
+
+.contact-us {
+    margin-bottom: 0px;
+}
+
