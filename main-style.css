@@ -1,0 +1,65 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #2B782B;
+    color: #DDF8D7;
+}
+
+/* nav-start */
+nav {
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin: 0;
+}
+
+nav li {
+    width: 100px;
+    height: 10px;
+    margin-top: 1em;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #A7F49D;
+}
+
+a:hover,
+a:focus {
+    color: #f25f5c;
+    text-decoration: underline;
+    outline: none;
+}
+/* nav-end */
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2em;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+img {
+    width: 70%;
+    max-width: 500px;
+}
+
+.main-container p {
+    margin-bottom: 5em;
+}
