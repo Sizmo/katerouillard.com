@@ -1,0 +1,81 @@
+:root {
+    --primary: rgb(0, 132, 71);
+    --secondary: rgb(16, 255, 203);
+    --text: rgb(251, 245, 243);
+    --dark: rgb(0, 21, 20);
+    --nav-bg: rgba(94, 243, 140, .5);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: var(--primary);
+    color: var(--text);
+}
+
+/* nav-start */
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--nav-bg);
+}
+
+nav ul {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin: 0;
+}
+
+nav li {
+    margin: 1em;
+    list-style-type: none;
+}
+/* nav-end */
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+a:hover,
+a:focus {
+    color: var(--secondary);
+    outline: none;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 auto 2em;
+    padding: .5em;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    width: 80%;
+    max-width: 1000px;
+    display: block;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+img {
+    width: 70%;
+    max-width: 500px;
+}
+
+.main-container p {
+    margin-bottom: 5em;
+}
+
+.work-title {
+    border: none;
+}
