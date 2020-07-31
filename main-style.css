@@ -1,3 +1,11 @@
+:root {
+    --primary: rgb(0, 132, 71);
+    --secondary: rgb(16, 255, 203);
+    --text: rgb(251, 245, 243);
+    --dark: rgb(0, 21, 20);
+    --nav-bg: rgba(94, 243, 140, .5);
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -5,14 +13,15 @@
 body {
     margin: 0;
     text-align: center;
-    background: #2B782B;
-    color: #DDF8D7;
+    background: var(--primary);
+    color: var(--text);
 }
 
 /* nav-start */
 nav {
     position: sticky;
     top: 0;
+    background: var(--nav-bg);
 }
 
 nav ul {
@@ -23,24 +32,21 @@ nav ul {
 }
 
 nav li {
-    width: 100px;
-    height: 10px;
-    margin-top: 1em;
+    margin: 1em;
     list-style-type: none;
 }
+/* nav-end */
 
-nav a {
+a {
     text-decoration: none;
-    color: #A7F49D;
+    color: var(--dark);
 }
 
 a:hover,
 a:focus {
-    color: #f25f5c;
-    text-decoration: underline;
+    color: var(--secondary);
     outline: none;
 }
-/* nav-end */
 
 h1 {
     font-size: 4rem;
@@ -48,7 +54,13 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 2em;
+    margin: 0 auto 2em;
+    padding: .5em;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    width: 80%;
+    max-width: 1000px;
+    display: block;
 }
 
 h3 {
@@ -62,4 +74,8 @@ img {
 
 .main-container p {
     margin-bottom: 5em;
+}
+
+.work-title {
+    border: none;
 }
