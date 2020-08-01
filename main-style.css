@@ -1,9 +1,14 @@
 :root {
     --primary: rgb(0, 132, 71);
-    --secondary: rgb(75, 6, 27);
+    /* --primary: #2C5F2D; */
+    --secondary: #D7263D;
     --text: rgb(251, 245, 243);
     --dark: rgb(0, 21, 20);
     --nav-bg: rgba(94, 243, 140, .8);
+    --link: #F7E1D7;
+    --link-hover: #EDAFB8;
+    font-size: 18px;
+
 }
 
 *, *::before, *::after {
@@ -29,6 +34,7 @@ nav ul {
     font-size: 20px;
     justify-content: center;
     margin: 0;
+    padding: 0;
 }
 
 nav li {
@@ -39,6 +45,7 @@ nav li {
 nav a {
     padding: .5em;
     border: 1px solid transparent;
+    color: var(--dark);
 }
 
 nav a:hover,
@@ -50,13 +57,14 @@ nav a:focus {
 
 a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--link);
 }
 
 a:hover,
 a:focus {
-    color: var(--secondary);
+    color: var(--link-hover);
     outline: none;
+    text-decoration: underline;
 }
 
 h1 {
@@ -73,11 +81,11 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 img {
-    width: 70%;
+    width: 100%;
     max-width: 500px;
 }
 
@@ -88,7 +96,11 @@ p {
 }
 
 .footer {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
+}
+
+.footer a {
+    text-decoration: underline;
 }
 
 .footer p {
@@ -96,7 +108,7 @@ p {
 }
 
 .main-container p {
-    margin-bottom: 5em;
+    padding-bottom: 3em;
 }
 
 .slogan {
@@ -105,11 +117,23 @@ p {
 }
 
 .testimonials {
-    margin-bottom: 5em;
+    background: var(--link);
+    color: var(--primary);
+    padding-top: .125em;
+    padding-bottom: 1em;
 }
 
 .testimonials p {
     margin-bottom: 2em;
+}
+
+.tester {
+    margin-top: -1.25em;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-bottom: 1em;
 }
 
 @media only screen and (max-width: 470px) {
