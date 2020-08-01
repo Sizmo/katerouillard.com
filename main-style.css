@@ -1,9 +1,9 @@
 :root {
     --primary: rgb(0, 132, 71);
-    --secondary: rgb(16, 255, 203);
+    --secondary: rgb(75, 6, 27);
     --text: rgb(251, 245, 243);
     --dark: rgb(0, 21, 20);
-    --nav-bg: rgba(94, 243, 140, .5);
+    --nav-bg: rgba(94, 243, 140, .8);
 }
 
 *, *::before, *::after {
@@ -32,8 +32,19 @@ nav ul {
 }
 
 nav li {
-    margin: 1em;
     list-style-type: none;
+    padding: 1em;
+}
+
+nav a {
+    padding: .5em;
+    border: 1px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+    border: 1px solid var(--dark);
+    color: var(--secondary);
 }
 /* nav-end */
 
@@ -56,15 +67,13 @@ h2 {
     font-size: 2rem;
     margin: 0 auto 2em;
     padding: .5em;
-    border-top: 1px solid var(--dark);
-    border-bottom: 1px solid var(--dark);
     width: 80%;
     max-width: 1000px;
     display: block;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 img {
@@ -72,10 +81,45 @@ img {
     max-width: 500px;
 }
 
+p {
+    display: block;
+    margin: 0 auto;
+    max-width: 60ch;
+}
+
+.footer {
+    margin-bottom: 5em;
+}
+
+.footer p {
+    margin-bottom: 2em;
+}
+
 .main-container p {
     margin-bottom: 5em;
 }
 
-.work-title {
-    border: none;
+.slogan {
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+}
+
+.testimonials {
+    margin-bottom: 5em;
+}
+
+.testimonials p {
+    margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 470px) {
+    nav ul {
+        flex-direction: column;
+        padding: .5em;
+    }
+
+    nav li {
+        padding: 0;
+        margin: .5em 0;
+    }
 }
