@@ -1,9 +1,14 @@
 :root {
     --primary: rgb(0, 132, 71);
-    --secondary: rgb(16, 255, 203);
+    /* --primary: #2C5F2D; */
+    --secondary: #D7263D;
     --text: rgb(251, 245, 243);
     --dark: rgb(0, 21, 20);
-    --nav-bg: rgba(94, 243, 140, .5);
+    --nav-bg: rgba(94, 243, 140, .8);
+    --link: #F7E1D7;
+    --link-hover: #EDAFB8;
+    font-size: 18px;
+
 }
 
 *, *::before, *::after {
@@ -29,23 +34,37 @@ nav ul {
     font-size: 20px;
     justify-content: center;
     margin: 0;
+    padding: 0;
 }
 
 nav li {
-    margin: 1em;
     list-style-type: none;
+    padding: 1em;
+}
+
+nav a {
+    padding: .5em;
+    border: 1px solid transparent;
+    color: var(--dark);
+}
+
+nav a:hover,
+nav a:focus {
+    border: 1px solid var(--dark);
+    color: var(--secondary);
 }
 /* nav-end */
 
 a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--link);
 }
 
 a:hover,
 a:focus {
-    color: var(--secondary);
+    color: var(--link-hover);
     outline: none;
+    text-decoration: underline;
 }
 
 h1 {
@@ -56,26 +75,75 @@ h2 {
     font-size: 2rem;
     margin: 0 auto 2em;
     padding: .5em;
-    border-top: 1px solid var(--dark);
-    border-bottom: 1px solid var(--dark);
     width: 80%;
     max-width: 1000px;
     display: block;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 
 img {
-    width: 70%;
+    width: 100%;
     max-width: 500px;
 }
 
-.main-container p {
-    margin-bottom: 5em;
+p {
+    display: block;
+    margin: 0 auto;
+    max-width: 60ch;
 }
 
-.work-title {
-    border: none;
+.footer {
+    margin-bottom: 3em;
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-bottom: 2em;
+}
+
+.main-container p {
+    padding-bottom: 3em;
+}
+
+.slogan {
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+}
+
+.testimonials {
+    background: var(--link);
+    color: var(--primary);
+    padding-top: .125em;
+    padding-bottom: 1em;
+}
+
+.testimonials p {
+    margin-bottom: 2em;
+}
+
+.tester {
+    margin-top: -1.25em;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 470px) {
+    nav ul {
+        flex-direction: column;
+        padding: .5em;
+    }
+
+    nav li {
+        padding: 0;
+        margin: .5em 0;
+    }
 }
