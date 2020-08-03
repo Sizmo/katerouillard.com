@@ -191,6 +191,7 @@ section {
     nav ul {
         flex-direction: column;
         padding: .5em;
+        font-size: 14px;
     }
 
     nav li {
