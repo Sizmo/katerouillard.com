@@ -104,18 +104,6 @@ section {
     text-align: left;
 }
 
-.footer {
-    margin-bottom: 3em;
-}
-
-.footer a {
-    text-decoration: underline;
-}
-
-.footer p {
-    margin-bottom: 2em;
-}
-
 .main-container p {
     padding-bottom: 3em;
 }
@@ -128,8 +116,8 @@ section {
 .testimonials {
     background: var(--link);
     color: var(--primary);
-    padding-top: .125em;
-    padding-bottom: 1em;
+    margin: 0 0 2em;
+    padding: .1em 0 1em;
 }
 
 .testimonials p {
@@ -137,7 +125,7 @@ section {
 }
 
 .tester {
-    margin-top: -1.25em;
+    margin-top: -1em;
 }
 
 .copyright {
@@ -165,6 +153,7 @@ section {
 
 .bg ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .bg h3 {
@@ -173,7 +162,7 @@ section {
 
 .polaroid {
     width: 50%;
-    max-width: 1000px;
+    max-width: 500px;
     background: #fff;
     margin: 0 auto;
 }
@@ -185,6 +174,32 @@ section {
 .photo-caption {
     color: #000;
     padding-bottom: 1em;
+}
+
+.big-polaroid {
+    width: 75%;
+    max-width: 1000px;
+}
+
+.big-image {
+    max-width: 1000px;
+}
+
+.larger-text  p {
+    margin: 0 auto;
+    font-size: 20px;
+    width: 90%;
+    max-width: 80ch;
+}
+
+.contact-button {
+    display: block;
+    background: var(--dark);
+    width: 300px;
+    max-width: 30%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: .5em 1em;
 }
 
 @media only screen and (max-width: 470px) {
