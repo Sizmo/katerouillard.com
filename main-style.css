@@ -195,12 +195,19 @@ section {
 
 .contact-button {
     display: block;
-    background: var(--dark);
+    background: var(--link);
+    color: var(--primary);
     width: 300px;
     max-width: 30%;
     margin: 0 auto;
     margin-bottom: 2em;
     padding: .5em 1em;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background: #fff;
+    color: var(--dark);
 }
 
 @media only screen and (max-width: 470px) {
