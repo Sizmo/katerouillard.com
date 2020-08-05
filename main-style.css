@@ -85,6 +85,10 @@ h3 {
     font-size: 1.75rem;
 }
 
+h4 {
+    font-size: 1.5rem;
+}
+
 img {
     width: 100%;
     max-width: 500px;
@@ -111,6 +115,7 @@ section {
 .slogan {
     border-top: 1px solid var(--dark);
     border-bottom: 1px solid var(--dark);
+    max-width: 30ch;
 }
 
 .testimonials {
@@ -186,11 +191,9 @@ section {
     max-width: 1000px;
 }
 
-.larger-text  p {
-    margin: 0 auto;
-    font-size: 20px;
-    width: 90%;
-    max-width: 80ch;
+.video {
+    width: 80%;
+    max-width: 800px;
 }
 
 .contact-button {
@@ -208,6 +211,15 @@ section {
 .contact-button:focus {
     background: #fff;
     color: var(--dark);
+}
+
+.dark-text {
+    color: var(--dark);
+}
+
+.longer {
+    margin-bottom: 2em;
+    max-width: 90ch;
 }
 
 @media only screen and (max-width: 470px) {
