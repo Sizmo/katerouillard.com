@@ -1,3 +1,14 @@
+:root {
+  /* --green: #285943; */
+  --light-green: #d8f3dc;
+  --green: #52b788;
+  --dark-green: #386641;
+  --bright-green: #15d628;
+  --dark-jungle-green: #081c15;
+  --grey: #c9c9c9;
+}
+/* all color text = dark green- */
+
 *,
 *::after,
 *::before {
@@ -9,6 +20,7 @@
 body {
   font-size: 18px;
   background: #f2e8cf;
+  color: var(--dark-jungle-green);
 }
 
 img,
@@ -39,6 +51,7 @@ figcaption {
 
 .nav,
 .header {
+  position: -webkit-sticky;
   position: sticky;
   z-index: 10;
   top: 0;
@@ -51,9 +64,6 @@ figcaption {
   justify-content: space-between;
   height: 70px;
 }
-/* .shadow {
-  box-shadow: 5px 7px rgba(0, 0, 0, 0.5);
-} */
 
 .icon {
   display: flex;
@@ -74,7 +84,17 @@ figcaption {
   height: auto;
 }
 .icon-text {
-  color: #15d628;
+  color: var(--bright-green);
+}
+
+.fa-bars,
+.fa-times {
+  padding: 0.5em;
+  color: var(--bright-green);
+  border: 2px solid var(--green);
+  border-radius: 10px;
+  margin-right: 1em;
+  cursor: pointer;
 }
 
 .fa-times {
@@ -82,54 +102,48 @@ figcaption {
   padding: 0.5em 0.6em;
 }
 
-.fa-bars,
-.fa-times {
-  padding: 0.5em;
-  color: #15d628;
-  border: 2px solid #285943;
-  border-radius: 10px;
-  margin-right: 1em;
-  cursor: pointer;
-}
-
 .nav-list {
   display: none;
   align-items: center;
   justify-content: flex-end;
   list-style: none;
-  gap: 0.5em;
 }
 
 .nav-list-mobile {
   position: absolute;
   z-index: -1;
   top: 0;
-  right: 0;
-  background: #386641;
+  right: -9px;
+  background: var(--dark-jungle-green);
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 2em;
   flex-direction: column;
   list-style: none;
-  margin-bottom: 1em;
 }
 
 .nav-list-item {
   text-decoration: none;
   margin: 0 1em;
-  color: #15d628;
+  color: var(--bright-green);
   padding: 0.25em 0.75em;
   border: 2px solid transparent;
-  transition: color 0.25s linear, background-color 0.25s linear;
+  transition: all 0.25s linear;
+}
+
+.nav-list-item-mobile {
+  position: relative;
+  top: 80px;
 }
 
 .nav-list-item:hover,
 .nav-list-item:focus {
-  color: #285943;
-  border: 2px solid #41521f;
-  background: #77af9c;
+  background: var(--green);
+  color: var(--dark-jungle-green);
+  border-radius: 50px;
 }
 
 .title,
@@ -160,21 +174,50 @@ figcaption {
     linear-gradient(to bottom, #c9c9c9 100%, #c9c9c9 100%);
   background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  -webkit-animation: text-fadein 0.5s, bg 5s cubic-bezier(0.4, 1, 0.2, 1) 1;
   animation: text-fadein 0.5s, bg 5s cubic-bezier(0.4, 1, 0.2, 1) 1;
 }
 
 .page-title {
-  padding: 1em;
   color: #285943;
+  border-bottom: 2px solid var(--dark-jungle-green);
+  margin: 1.5em auto 2.5em;
+  width: 35%;
 }
 
 /* SLOGAN ANIMATIONS */
+@-webkit-keyframes text-fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes text-fadein {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes bg {
+  0% {
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+  }
+  25% {
+    background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+  }
+  50% {
+    background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+  }
+  75% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+  }
+  100% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
   }
 }
 
@@ -208,8 +251,10 @@ figcaption {
 .section-title {
   font-size: 1.75rem;
   margin: 0 1em 1.5em;
-  color: #14213d;
-  text-decoration: underline #bc4749;
+  color: var(--dark-green);
+  -webkit-text-decoration: underline var(--grey);
+  text-decoration: underline var(--grey);
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 .section-image,
@@ -226,29 +271,34 @@ figcaption {
 }
 
 .section-text p {
-  color: #0b090a;
   margin-bottom: 1em;
   font-size: 1.25rem;
 }
 
 .section-text a {
-  color: #004b23;
+  color: var(--dark-green);
+  -webkit-text-decoration: underline 2px var(--dark-jungle-green);
+  text-decoration: underline 2px var(--dark-jungle-green);
 }
 
 .section-text a:hover {
-  color: #38b000;
-  text-decoration: underline #006400;
+  color: var(--green);
+  -webkit-text-decoration: underline 2px var(--bright-green);
+  text-decoration: underline 2px var(--bright-green);
+}
+
+.heading,
+.sub-heading {
+  color: var(--dark-green);
 }
 
 .heading {
-  color: #14213d;
+  text-align: center;
   margin-bottom: 0.5em;
-  margin-left: 0.5em;
 }
 
 .sub-heading {
-  color: #212d40;
-  margin: 0.75em 2em 0.5em;
+  margin: 0.75em 0 0.5em;
 }
 
 .sub-heading-list {
@@ -264,11 +314,20 @@ figcaption {
   max-width: 60ch;
   line-height: 1.25em;
   letter-spacing: 0.5px;
-  margin-left: 10%;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
+  margin-left: 10px;
 }
 
-.bg-text-p {
+.page-title-b {
+  color: var(--dark-green);
+  margin: 1em auto;
+  text-align: center;
+  width: 230px;
+  border-bottom: 2px solid var(--dark-jungle-green);
+}
+
+.bg-text-p,
+.inner-container {
   max-width: 60ch;
   margin: 0 auto 2em;
 }
@@ -304,7 +363,8 @@ figcaption {
 }
 
 .testimonials {
-  background-color: #d7fff1;
+  background-color: #081c15;
+  color: #d8f3dc;
   margin-bottom: 2em;
   padding: 2em 0 4em;
 }
@@ -313,6 +373,7 @@ figcaption {
   margin-bottom: 1em;
   text-decoration: none;
   border: 1px solid #000;
+  color: #95d5b2;
 }
 
 .testimonials-row {
@@ -337,23 +398,22 @@ figcaption {
   text-align: center;
 }
 
-.cta,
-.cta-text {
-  transition: all 0.5s;
-}
-
+/* change black to dark green */
 .cta {
   padding: 1em 1.5em;
-  background: #000;
-  color: #fff;
+  background: var(--dark-green);
+  color: var(--light-green);
+  transition: all 0.5s;
+  border-radius: 500px;
 }
 
 .cta:hover {
-  background: #fff;
-  color: #000;
+  background: #95d5b2;
+  color: var(--dark-jungle-green);
 }
 
 .copyright {
+  color: var(--dark-jungle-green);
   font-size: 0.75rem;
   padding: 0.25em;
 }
@@ -369,10 +429,7 @@ figcaption {
     display: flex;
   }
 
-  #menu-btn-open {
-    display: none;
-  }
-
+  #menu-btn-open,
   #menu-btn-close {
     display: none;
   }
