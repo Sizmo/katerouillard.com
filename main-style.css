@@ -65,11 +65,15 @@ figcaption {
   height: 70px;
 }
 
+.nav {
+  margin-right: 10vw;
+}
+
 .icon {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  margin-left: 1em;
+  margin-left: 10vw;
 }
 
 .absolute-icon {
@@ -174,8 +178,8 @@ figcaption {
     linear-gradient(to bottom, #c9c9c9 100%, #c9c9c9 100%);
   background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  -webkit-animation: text-fadein 0.5s, bg 5s cubic-bezier(0.4, 1, 0.2, 1) 1;
-  animation: text-fadein 0.5s, bg 5s cubic-bezier(0.4, 1, 0.2, 1) 1;
+  -webkit-animation: text-fadein 0.5s, bg 5s linear;
+  animation: text-fadein 0.5s, bg 5s linear;
 }
 
 .page-title {
@@ -398,7 +402,6 @@ figcaption {
   text-align: center;
 }
 
-/* change black to dark green */
 .cta {
   padding: 1em 1.5em;
   background: var(--dark-green);
@@ -418,13 +421,13 @@ figcaption {
   padding: 0.25em;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 750x) {
   #menu-btn-close {
     display: none;
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 750px) {
   #nav-list {
     display: flex;
   }
